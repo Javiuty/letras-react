@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import Formulario from "./components/Formulario";
 
 const App = () => {
+  const [busquedaletra, guardarBusquedaLetra] = useState({});
+
   return (
     <>
-      <Formulario />
+      <Formulario guardarBusquedaLetra={guardarBusquedaLetra} />
     </>
   );
 };
