@@ -42,6 +42,11 @@ const App = () => {
           </div>
           <div className="col-md-6">
             <Cancion letra={letra} />
+            {letra.length === 0 && Object.keys(info).length !== 0 ? (
+              <p className="alert alert-primary text-center">
+                No se encontró la letra de la canción
+              </p>
+            ) : null}
           </div>
         </div>
       </div>
